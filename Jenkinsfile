@@ -5,9 +5,6 @@ pipeline {
       agent any
       steps {
         echo 'Going to clean workspace'
-        pwd(tmp: true)
-        dir(path: '/home/pi/buildWS')
-        sh 'rm -r *.*'
       }
     }
     stage('build') {

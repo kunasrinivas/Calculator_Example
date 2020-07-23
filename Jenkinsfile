@@ -10,6 +10,23 @@ pipeline {
         sh 'rm -r *.*'
       }
     }
-
+    stage('build') {
+      agent any
+      steps {
+        echo 'Going to build application'
+      }
+    }
+    stage('test') {
+      agent any
+      steps {
+        echo 'Going to test application'
+      }
+    }
+    stage('deploy') {
+      agent any
+      steps {
+        echo 'Going to deploy application'
+      }
+    }
   }
 }

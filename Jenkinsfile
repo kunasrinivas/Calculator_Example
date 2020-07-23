@@ -1,5 +1,6 @@
 pipeline {
   agent any
+  parameters { choice(name: 'Environment', choices: ['dev', 'test', 'pre-prod'], description: '') }
   stages {
     stage('clean') {
       agent any
